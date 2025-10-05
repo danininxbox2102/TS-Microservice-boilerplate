@@ -1,0 +1,5 @@
+{
+  "gatewayUrl": "http://localhost:3000",
+  "apiServerPort": 3001,
+  "trustProxy": "127.0.0.1"
+}
