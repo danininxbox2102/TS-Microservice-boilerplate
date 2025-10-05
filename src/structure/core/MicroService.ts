@@ -94,7 +94,10 @@ export default class MicroService {
             const data = await response.json();
             if (data.success) {
                 this.logger.info("✅ Connected to gateway")
+                return
             }
+
+            this.logger.error(`Failed to connect to the API Gateway: ${data.code}  ${data.message}`)
         } catch (e: any) {
             this.logger.error(`Failed to connect to the API Gateway: ${e}`);
             process.exit(1);
